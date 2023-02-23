@@ -29,7 +29,7 @@ mybatis:
 
 - contextProvider
 ```java
-cp.setServerName("<METADATA URL>"); // line 148
+cp.setServerName("<Service Provider URL>"); // line 148
 ```
 
 - keyManager
@@ -57,5 +57,5 @@ String url = "<METADATA-URL>"; // line 82
 ### `src/main/resources/templates/pages/discovery.html`
 ```html
 <!-- line 23 -->
-<form action="https://<METADATA URL>/saml/login?disco=true" method="get"> 
+<form action="https://<Service Provider URL>/saml/login?disco=true" method="get"> 
 ```
