@@ -20,10 +20,10 @@ mybatis:
 
 ## Change, Modify, Edit
 
-### `simpleweb/src/main/resources/saml/update-certificate.sh`
+### `src/main/resources/saml/update-certificate.sh`
 - edit to your info
 
-### `simpleweb/src/main/java/com/season/simpleweb/config/SecurityConfig.java`
+### `src/main/java/com/season/simpleweb/config/SecurityConfig.java`
 
 - contextProvider
 ```java
@@ -47,12 +47,12 @@ metadataGenerator.setEntityBaseURL("https://<METADATA URL>"); // line 279
 metadataGenerator.setEntityId("https://<METADATA URL>/sp/spring"); // line 280
 ```
 
-### `simpleweb/src/main/java/com/season/simpleweb/ctrl/SSOController.java`
+### `src/main/java/com/season/simpleweb/ctrl/SSOController.java`
 ```java
 String url = "<METADATA-URL>"; // line 82
 ```
 
-### `simpleweb/src/main/resources/templates/pages/discovery.html`
+### `src/main/resources/templates/pages/discovery.html`
 ```html
 <!-- line 23 -->
 <form action="https://<METADATA URL>/saml/login?disco=true" method="get"> 
