@@ -11,6 +11,8 @@ spring:
     url: jdbc:mysql://<URL>:<PORT>/<DB_NAME>?serverTimezone=UTC&characterEncoding=UTF-8
     username: <DB_USERNAME>
     password: <DB_PASSWORD>
+  main:
+    allow-circular-references: true
 
 mybatis:
   type-aliases-package: com.season.simpleweb.mybatis
