@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.season.simpleweb.mybatis.UserMapper">
+	<select id="getName" parameterType="String" resultType="Integer">
+		select count(id) cnt from user
+		where LOWER(id) like '%${_name}%' or
+				LOWER(name) like '%${_name}%' or
+				LOWER(email) like '%${_name}%'
+	</select>
+
+	<select id="getUser" parameterType="String" resultType="Map">
+		select * from user
+		where
+			id = #{_id}
+	</select>
+
+</mapper>
